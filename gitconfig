@@ -1,0 +1,26 @@
+[user]
+    name = Per Forser
+    email = per.forser@binar.se
+[alias]
+    st = status
+    ts = status
+    ci = commit
+    br = branch
+    co = checkout
+    sm = submodule
+    re = remote
+    lol = log --graph --oneline --decorate
+    hl = log --format='tformat:%ad | %s' --date=short
+    mani = ls-tree --full-tree --name-only -r HEAD
+    info = !git br -vv && git remote -v
+    root = !basename $(git rev-parse --show-toplevel)
+[push]
+    default = simple
+    followTags = true
+[grep]
+    lineNumber = true
+    patternType = extended
+[status]
+    submoduleSummary = true
+[diff]
+    submodule = log
