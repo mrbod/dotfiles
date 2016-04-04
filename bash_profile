@@ -17,7 +17,7 @@ export LESS=FMRX
 export EDITOR=vim
 export BROWSER=firefox
 
-export CDPATH=.:$HOME:$HOME/prog:$HOME/bin
+export CDPATH=.
 
 export CPPUTEST_HOME=~/prog/cpputest
 
