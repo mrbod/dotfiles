@@ -10,10 +10,11 @@
     sm = submodule
     re = remote
     lol = log --graph --oneline --decorate
+    lal = log --graph --oneline --decorate --all
     hl = log --format='tformat:%ad | %s' --date=short
     mani = ls-tree --full-tree --name-only -r HEAD
     info = !git br -vv && git remote -v
-    root = !basename $(git rev-parse --show-toplevel)
+    root = !basename \"$(git rev-parse --show-toplevel)\"
 [push]
     default = simple
     followTags = true
