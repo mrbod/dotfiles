@@ -36,14 +36,15 @@ export GIT_PS1_SHOWCOLORHINTS=1
 # prompt
 function __gitroot()
 {
-    GR=$(git root 2>/dev/null)
-    if [ "$GR" == $(basename $(pwd)) ]
+    tl=$(git rev-parse --show-toplevel 2>/dev/null)
+    if [ -n "$tl" ]
     then
-        GR=
-    fi
-    if ! [ -z $GR ]
-    then
-        echo "$GR "
+        gr=$(realpath "$tl")
+        rp=$(realpath "$PWD")
+        if [ "$gr" != "$rp" ]
+        then
+            echo "$tl "
+        fi
     fi
 }
 #export PROMPT_COMMAND='__git_ps1 "\u@\h:\W" "\\\$ "'
