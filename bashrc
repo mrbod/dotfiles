@@ -52,6 +52,6 @@ function __gitroot()
 export PROMPT_COMMAND='history -a; __git_ps1 "\[\033]0;\u@\h: \w\007\]\W" "\\\$ " " [$(__gitroot)%s]"'
 #export PROMPT_COMMAND='PS1="\[\033]0;\u@\h: \w\007\]\W\\$ "'
 
-source $HOME/.cd_func.sh
+source $HOME/.dotfiles/cd_func.sh
 alias cd=cd_func
 
