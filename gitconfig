@@ -1,6 +1,5 @@
-[user]
-    name = Per Forser
-    email = per.forser@gmail.com
+[include]
+    path = /home/per.forser/.dotfiles/gituser
 [alias]
     st = status
     ts = status
