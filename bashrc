@@ -43,7 +43,8 @@ function __gitroot()
         rp=$(realpath "$PWD")
         if [ "$gr" != "$rp" ]
         then
-            echo "$tl "
+            bntl=$(basename "$tl")
+            echo "$bntl "
         fi
     fi
 }
