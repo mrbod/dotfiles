@@ -1,0 +1,8 @@
+--exclude=*~
+--exclude=build
+--exclude=dist
+--exclude=*.egg-info
+--exclude=venv
+--python-kinds=-i
+--extra=+f
+
