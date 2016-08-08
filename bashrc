@@ -1,4 +1,6 @@
 alias ls='ls --color=auto'
+alias ll='ls -l'
+alias lt='ls -ltr'
 alias grep='grep --color=auto'
 alias cal='cal -m'
 alias pylab='ipython --pylab'
