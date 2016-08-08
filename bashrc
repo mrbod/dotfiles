@@ -57,3 +57,5 @@ export PROMPT_COMMAND='history -a; __git_ps1 "\[\033]0;\u@\h: \w\007\]\W" "\\\$ 
 source $HOME/.dotfiles/cd_func.sh
 alias cd=cd_func
 
+source $HOME/.dotfiles/transfer.sh
+
