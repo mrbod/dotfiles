@@ -1,10 +1,12 @@
 transfer() {
     if [ $# -eq 0 ]
     then
-        echo "No arguments specified. Usage:\necho transfer /tmp/test.md\ncat /tmp/test.md | transfer test.md"
+        echo "No arguments specified. Usage:"
+        echo "transfer /tmp/test.md"
+        echo "cat /tmp/test.md | transfer test.md"
         return 1
     fi
-    tmpfile=$( mktemp -t transferXXX )
+    tmpfile=$(mktemp)
     if tty -s
     then
         basefile=$(basename "$1" | sed -e 's/[^a-zA-Z0-9._-]/-/g')
