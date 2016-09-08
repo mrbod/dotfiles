@@ -1,11 +1,11 @@
 export LD_LIBRARY_PATH=~/lib
 
-PATH=$PATH:/sbin:/usr/sbin:/usr/local/sbin
 PATH=$PATH:/usr/lib64/java/bin
 PATH=$PATH:/opt/mxe/usr/bin
 PATH=$PATH:/opt/arm/arm-2013.05/bin
 PATH=$PATH:/opt/gcc-linaro-4.9-2015.05-x86_64_arm-linux-gnueabihf/bin
 PATH=$PATH:/opt/avr8-gnu-toolchain-linux_x86_64/bin
+PATH=$PATH:/sbin:/usr/sbin:/usr/local/sbin
 PATH=$PATH:/usr/libexec/xscreensaver
 PATH=$PATH:~/bin:.
 export PATH
