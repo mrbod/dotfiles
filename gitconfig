@@ -8,6 +8,7 @@
     co = checkout
     sm = submodule
     re = remote
+    ds = diff --staged
     meld = difftool -d
     lol = log --graph --oneline --decorate
     lal = log --graph --oneline --decorate --all
