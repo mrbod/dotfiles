@@ -12,11 +12,11 @@
     meld = difftool -d
     lol = log --graph --oneline --decorate
     lal = log --graph --oneline --decorate --all
-    hl = log --format='tformat:%ad | %s' --date=short
+    hl = log --format='tformat:* %ad %h%d%n%s' --date=short --reverse
     manifest = ls-tree --full-tree --name-only -r HEAD
     info = !git br -vv && git remote -v
     root = !basename \"$(git rev-parse --show-toplevel)\"
-	webui = !/home/per/prog/git-webui/release/libexec/git-core/git-webui
+    webui = !/home/per/prog/git-webui/release/libexec/git-core/git-webui
 [push]
     default = simple
     followTags = true
@@ -27,4 +27,4 @@
     submoduleSummary = true
 [diff]
     submodule = log
-	tool = meld
+    tool = meld
