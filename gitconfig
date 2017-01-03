@@ -19,6 +19,7 @@
     webui = !/home/per/prog/git-webui/release/libexec/git-core/git-webui
     tm = show --quiet --pretty=format:"%N"
     date = show --quiet --pretty=format:"%ai"
+	ctags = !.git/hooks/ctags
 [push]
     default = simple
     followTags = true
