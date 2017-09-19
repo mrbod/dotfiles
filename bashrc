@@ -1,4 +1,13 @@
-alias ls='ls --color=auto'
+if uname | grep CYGWIN > /dev/null
+then
+	LSIGNORE='-I NTUSER.DAT\*'
+	MSVC="$HOME/.dotfiles/cl.sh"
+	if [ -r "$MSVC" ]
+	then
+		source "$MSVC"
+	fi
+fi
+alias ls="command ls --color=auto $LSIGNORE"
 alias ll='ls -l'
 alias lt='ls -ltr'
 alias grep='grep --color=auto'
