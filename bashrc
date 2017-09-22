@@ -31,9 +31,6 @@ HISTTIMEFORMAT='%F %T '
 
 # completion
 source /usr/share/bash-completion/bash_completion
-bind "set completion-ignore-case on"
-bind "set completion-map-case on"
-bind "set show-all-if-ambiguous on"
 if ! uname | grep 'MING' >/dev/null
 then
 	source "$HOME/.dotfiles/gitprompt.sh"
