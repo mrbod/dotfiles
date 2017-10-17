@@ -39,6 +39,11 @@ then
 	source "$HOME/.dotfiles/gitprompt.sh"
 fi
 
+if [ "$TERM" == "xterm" ]
+then
+    export TERM=xterm-256color
+fi
+
 source "$HOME/.dotfiles/cd_func.sh"
 alias cd=cd_func
 
