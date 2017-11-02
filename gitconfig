@@ -1,5 +1,7 @@
 [include]
     path = ~/.dotfiles/gituser
+[core]
+    excludesFile = ~/.dotfiles/gitignore
 [alias]
     st = status
     ts = status
