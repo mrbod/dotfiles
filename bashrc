@@ -6,12 +6,14 @@ then
 	then
 		source "$MSVC"
 	fi
+
+	export SVN_SSH=ssh
 fi
 alias ls="command ls --color=auto $LSIGNORE"
 alias ll='ls -l'
 alias lt='ls -ltr'
 alias grep='grep --color=auto'
-alias cal='cal -m'
+alias cal='cal -m -w'
 alias pylab='ipython --pylab'
 alias gh=hg
 alias gti=git

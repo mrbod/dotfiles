@@ -1,0 +1,9 @@
+--mode=c
+--style=allman
+--indent=tab=4
+--convert-tabs
+--pad-oper
+--pad-comma
+--unpad-paren
+--max-code-length=80
+
