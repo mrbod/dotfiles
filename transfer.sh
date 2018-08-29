@@ -16,7 +16,7 @@ transfer() {
     fi
     cat $tmpfile
 	echo
-    cat $tmpfile >> "$HOME/.transfers"
+	printf "[%s] %s\n" "$(date --rfc-3339=seconds)" "$(cat $tmpfile)" >> "$HOME/.transfers"
     rm -f $tmpfile
 }
 
