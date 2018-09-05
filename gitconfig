@@ -4,6 +4,7 @@
     excludesFile = ~/.dotfiles/gitignore
 [alias]
     st = status
+    sp = status --porcelain
     ts = status
     ci = commit
     br = branch
@@ -14,8 +15,10 @@
     meld = difftool -d
     lol = log --graph --oneline --decorate
     lal = log --graph --oneline --decorate --all
+    lc = log --oneline --decorate origin..
     hl = log --format='tformat:* %ad %h%d%n%s' --date=short --reverse
     manifest = ls-tree --full-tree --name-only -r HEAD
+	pick = log --oneline --abbrev-commit -G
     info = !git br -vv && git remote -v
     root = !basename \"$(git rev-parse --show-toplevel)\"
     webui = !/home/per/prog/git-webui/release/libexec/git-core/git-webui
@@ -33,3 +36,5 @@
 [diff]
     submodule = log
     tool = meld
+[submodule]
+	recurse = true
