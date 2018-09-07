@@ -1,7 +1,7 @@
 [include]
     path = ~/.dotfiles/gituser
 [core]
-    excludesFile = ~/.dotfiles/gitignore
+    excludesFile = ~/.gitignore
 [alias]
     st = status
     sp = status --porcelain
@@ -13,6 +13,7 @@
     re = remote
     ds = diff --staged
     meld = difftool -d
+    ancestor = merge-base --is-ancestor --
     lol = log --graph --oneline --decorate
     lal = log --graph --oneline --decorate --all
     lc = log --oneline --decorate origin..
