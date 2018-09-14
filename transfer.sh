@@ -15,6 +15,8 @@ transfer() {
         curl --progress-bar --upload-file "-" "https://transfer.sh/$1" >> $tmpfile 
     fi
     cat $tmpfile
+	echo
+	printf "[%s] %s\n" "$(date --rfc-3339=seconds)" "$(cat $tmpfile)" >> "$HOME/.transfers"
     rm -f $tmpfile
 }
 
