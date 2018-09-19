@@ -1,11 +1,12 @@
 [include]
     path = ~/.dotfiles/gituser
 [core]
-    excludesFile = ~/.dotfiles/gitignore
-	autocrlf = input
-	eol = native
+    autocrlf = input
+    eol = native
+    excludesFile = ~/.gitignore
 [alias]
     st = status
+    sp = status --porcelain
     ts = status
     ci = commit
     br = branch
@@ -13,16 +14,20 @@
     sm = submodule
     re = remote
     ds = diff --staged
+    meld = difftool -d
+    ancestor = merge-base --is-ancestor --
     lol = log --graph --oneline --decorate
     lal = log --graph --oneline --decorate --all
+    lc = log --oneline --decorate origin..
     hl = log --format='tformat:* %ad %h%d%n%s' --date=short --reverse
     manifest = ls-tree --full-tree --name-only -r HEAD
+    pick = log --oneline --abbrev-commit -G
     info = !git br -vv && git remote -v
     root = !basename \"$(git rev-parse --show-toplevel)\"
     webui = !/home/per/prog/git-webui/release/libexec/git-core/git-webui
     tm = show --quiet --pretty=format:"%N"
     date = show --quiet --pretty=format:"%ai"
-	ctags = !.git/hooks/ctags
+    ctags = !.git/hooks/ctags
 [push]
     default = simple
     followTags = true
@@ -33,4 +38,6 @@
     submoduleSummary = true
 [diff]
     submodule = log
-
+    tool = meld
+[submodule]
+    recurse = true
