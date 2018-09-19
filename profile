@@ -1,6 +1,8 @@
 export LD_LIBRARY_PATH=~/lib
 
 PATH=$PATH:/sbin:/usr/sbin:/usr/local/sbin
+#PATH=$PATH:/opt/mxe/usr/bin
+PATH=$PATH:/opt/mingw64/bin
 PATH=$PATH:/usr/libexec/xscreensaver
 PATH=$PATH:~/bin:.
 export PATH

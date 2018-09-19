@@ -2,6 +2,8 @@
     path = ~/.dotfiles/gituser
 [core]
     excludesFile = ~/.dotfiles/gitignore
+	autocrlf = input
+	eol = native
 [alias]
     st = status
     ts = status
@@ -11,7 +13,6 @@
     sm = submodule
     re = remote
     ds = diff --staged
-    meld = difftool -d
     lol = log --graph --oneline --decorate
     lal = log --graph --oneline --decorate --all
     hl = log --format='tformat:* %ad %h%d%n%s' --date=short --reverse
@@ -32,4 +33,4 @@
     submoduleSummary = true
 [diff]
     submodule = log
-    tool = meld
+
