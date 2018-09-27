@@ -1,8 +1,6 @@
 [include]
     path = ~/.dotfiles/gituser
 [core]
-    autocrlf = input
-    eol = native
     excludesFile = ~/.gitignore
 [alias]
     st = status
