@@ -1,13 +1,3 @@
-if uname | grep CYGWIN > /dev/null
-then
-    MSVC="$HOME/.dotfiles/cl.sh"
-    if [ -r "$MSVC" ]
-    then
-        source "$MSVC"
-    fi
-
-    export SVN_SSH=ssh
-fi
 alias ls="command ls --color=auto $LSIGNORE"
 alias ll='ls -l'
 alias lt='ls -ltr'
