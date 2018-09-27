@@ -1,13 +1,12 @@
 if uname | grep CYGWIN > /dev/null
 then
-	LSIGNORE='-I NTUSER.DAT\*'
-	MSVC="$HOME/.dotfiles/cl.sh"
-	if [ -r "$MSVC" ]
-	then
-		source "$MSVC"
-	fi
+    MSVC="$HOME/.dotfiles/cl.sh"
+    if [ -r "$MSVC" ]
+    then
+        source "$MSVC"
+    fi
 
-	export SVN_SSH=ssh
+    export SVN_SSH=ssh
 fi
 alias ls="command ls --color=auto $LSIGNORE"
 alias ll='ls -l'
@@ -33,12 +32,10 @@ HISTTIMEFORMAT='%F %T '
 
 # completion
 source /usr/share/bash-completion/bash_completion
-bind "set completion-ignore-case on"
-bind "set completion-map-case on"
-bind "set show-all-if-ambiguous on"
+
 if ! uname | grep 'MING' >/dev/null
 then
-	source "$HOME/.dotfiles/gitprompt.sh"
+    source "$HOME/.dotfiles/gitprompt.sh"
 fi
 
 if [ "$TERM" == "xterm" ]
@@ -46,8 +43,12 @@ then
     export TERM=xterm-256color
 fi
 
-source "$HOME/.dotfiles/cd_func.sh"
-alias cd=cd_func
+FILE="$HOME/.dotfiles/cd_func.sh"
+[ -f "$FILE" ] && source "$FILE" && alias cd=cd_func
 
-source "$HOME/.dotfiles/transfer.sh"
+FILE="$HOME/.dotfiles/transfer.sh"
+[ -f "$FILE" ] && source "$FILE"
+
+FILE="$HOME/.dotfiles/bashrc_local"
+[ -f "$FILE" ] && source "$FILE"
 

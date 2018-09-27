@@ -4,9 +4,12 @@ PATH=$PATH:/sbin:/usr/sbin:/usr/local/sbin
 PATH=$PATH:/usr/libexec/xscreensaver
 if uname | grep CYGWIN > /dev/null
 then
-	PATH=~/bin:$PATH:.
+    PATH=~/bin:$PATH:.
 else
-	PATH=$PATH:~/bin:.
+    PATH=$PATH:/opt/mingw64/bin
+    PATH=$PATH:~/bin
+    PATH=$PATH:~/.local/bin
+    PATH=$PATH:.
 fi
 export PATH
 
@@ -20,6 +23,7 @@ export BROWSER=firefox
 export CDPATH=.
 
 export CPPUTEST_HOME=~/prog/cpputest
+export GTEST_BASE=~/googletest
 
 if uname | grep CYGWIN > /dev/null
 then

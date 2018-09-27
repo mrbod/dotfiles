@@ -1,6 +1,8 @@
 [include]
     path = ~/.dotfiles/gituser
 [core]
+    autocrlf = input
+    eol = native
     excludesFile = ~/.gitignore
 [alias]
     st = status
@@ -20,13 +22,13 @@
     lc = log --oneline --decorate origin..
     hl = log --format='tformat:* %ad %h%d%n%s' --date=short --reverse
     manifest = ls-tree --full-tree --name-only -r HEAD
-	pick = log --oneline --abbrev-commit -G
+    pick = log --oneline --abbrev-commit -G
     info = !git br -vv && git remote -v
     root = !basename \"$(git rev-parse --show-toplevel)\"
     webui = !/home/per/prog/git-webui/release/libexec/git-core/git-webui
     tm = show --quiet --pretty=format:"%N"
     date = show --quiet --pretty=format:"%ai"
-	ctags = !.git/hooks/ctags
+    ctags = !.git/hooks/ctags
 [push]
     default = simple
     followTags = true
@@ -39,4 +41,4 @@
     submodule = log
     tool = meld
 [submodule]
-	recurse = true
+    recurse = true

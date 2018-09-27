@@ -28,8 +28,8 @@ if uname | grep CYGWIN > /dev/null
 then
 	export PROMPT_COMMAND='history -a; PS1="\[\033]0;\u@\h: \w\007\]\w\\$ "'
 else
-	export PROMPT_COMMAND='__git_ps1 "\u@\h:\w" "\\\$ "'
-	#export PROMPT_COMMAND='history -a; __git_ps1 "\[\033]0;\u@\h: \w\007\]\W" "\\\$ " " [$(__gitroot)%s]"'
+	#export PROMPT_COMMAND='__git_ps1 "\u@\h:\w" "\\\$ "'
+	export PROMPT_COMMAND='history -a; __git_ps1 "\[\033]0;\u@\h: \w\007\]\W" "\\\$ " " [$(__gitroot)%s]"'
 	#export PROMPT_COMMAND='history -a; __git_ps1 "\[\033]0;\u@\h: \w\007\]\W" "\\\$ "'
 fi
 
