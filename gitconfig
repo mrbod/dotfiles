@@ -13,7 +13,8 @@
     re = remote
     ds = diff --staged
     meld = difftool -d
-    ancestor = merge-base --is-ancestor --
+    #ancestor = merge-base --is-ancestor --
+    ancestor = !git_ancestor
     lol = log --graph --oneline --decorate
     lal = log --graph --oneline --decorate --all
     lc = log --oneline --decorate origin..
