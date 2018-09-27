@@ -1,13 +1,12 @@
 if uname | grep CYGWIN > /dev/null
 then
-	LSIGNORE='-I NTUSER.DAT\*'
-	MSVC="$HOME/.dotfiles/cl.sh"
-	if [ -r "$MSVC" ]
-	then
-		source "$MSVC"
-	fi
+    MSVC="$HOME/.dotfiles/cl.sh"
+    if [ -r "$MSVC" ]
+    then
+        source "$MSVC"
+    fi
 
-	export SVN_SSH=ssh
+    export SVN_SSH=ssh
 fi
 alias ls="command ls --color=auto $LSIGNORE"
 alias ll='ls -l'
@@ -36,7 +35,7 @@ source /usr/share/bash-completion/bash_completion
 
 if ! uname | grep 'MING' >/dev/null
 then
-	source "$HOME/.dotfiles/gitprompt.sh"
+    source "$HOME/.dotfiles/gitprompt.sh"
 fi
 
 if [ "$TERM" == "xterm" ]
