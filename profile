@@ -27,6 +27,8 @@ export GTEST_BASE=~/googletest
 
 if uname | grep CYGWIN > /dev/null
 then
+	export NO_AT_BRIDGE=1
+
 	if ! ps | grep 'ssh-pageant' > /dev/null
 	then
 		eval $(ssh-pageant)
