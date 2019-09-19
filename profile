@@ -16,6 +16,7 @@ export PATH
 export LANG=en_US.UTF-8
 
 export LESS=FMRX
+export MANPAGER=less
 
 export EDITOR=vim
 export BROWSER=firefox
