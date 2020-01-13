@@ -1,4 +1,4 @@
 set completion-ignore-case on
 set completion-map-case on
 set show-all-if-ambiguous on
-
+"\e[Z": menu-complete
