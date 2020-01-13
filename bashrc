@@ -37,7 +37,7 @@ FILE="$HOME/.dotfiles/cd_func.sh"
 [ -f "$FILE" ] && source "$FILE" && alias cd=cd_func
 
 FILE="$HOME/.dotfiles/transfer.sh"
-[ -f "$FILE" ] && source "$FILE"
+#[ -f "$FILE" ] && source "$FILE"
 
 FILE="$HOME/.dotfiles/bashrc_local"
 [ -f "$FILE" ] && source "$FILE"
