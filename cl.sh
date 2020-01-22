@@ -1,7 +1,7 @@
 function run_in_vs_env
 {
     eval vssetup="\$$1\\$2"
-    cmd /Q /C call "$vssetup" "&&" "${@:3}"
+    PATH="$ORIGINAL_PATH" cmd /Q /C call "$vssetup" "&&" "${@:3}"
 }
 
 function run_vs15
