@@ -2,10 +2,13 @@
     path = ~/.dotfiles/gituser
 [core]
     excludesFile = ~/.gitignore
+[init]
+    defaultBranch = master
 [alias]
     st = status --column
     sp = status --porcelain
     ci = commit
+    cip = commit --reset-author -c
     br = branch
     co = checkout
     sm = submodule

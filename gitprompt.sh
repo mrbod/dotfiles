@@ -1,6 +1,6 @@
 gitcontrib=/usr/doc/git-*/contrib
-source $gitcontrib/completion/git-completion.bash
-source $gitcontrib/completion/git-prompt.sh
+source $gitcontrib/completion/git-completion.bash 2>/dev/null
+source $gitcontrib/completion/git-prompt.sh 2>/dev/null
 
 export GIT_PS1_SHOWDIRTYSTATE=1
 export GIT_PS1_SHOWSTASHSTATE=1
@@ -24,12 +24,7 @@ function __gitroot()
 	fi
 }
 
-if uname | grep CYGWIN > /dev/null
-then
-	export PROMPT_COMMAND='history -a; PS1="\[\033]0;\u@\h: \w\007\]\w\\$ "'
-else
-	#export PROMPT_COMMAND='__git_ps1 "\u@\h:\w" "\\\$ "'
-	#export PROMPT_COMMAND='history -a; __git_ps1 "\[\033]0;\u@\h: \w\007\]\W" "\\\$ " " [$(__gitroot)%s]"'
-	export PROMPT_COMMAND='history -a; __git_ps1 "\[\033]0;\u@\h: \w\007\]\W" "\\\$ "'
-fi
+#export PROMPT_COMMAND='__git_ps1 "\u@\h:\w" "\\\$ "'
+#export PROMPT_COMMAND='history -a; __git_ps1 "\[\033]0;\u@\h: \w\007\]\W" "\\\$ " " [$(__gitroot)%s]"'
+export PROMPT_COMMAND='history -a; __git_ps1 "\[\033]0;\u@\h: \w\007\]\W" "\\\$ "'
 
