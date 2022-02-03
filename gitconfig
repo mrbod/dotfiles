@@ -27,6 +27,8 @@
     tm = show --quiet --pretty=format:"%N"
     date = show --quiet --pretty=format:"%ai"
     ctags = !.git/hooks/ctags
+[pull]
+    rebase = false
 [push]
     default = simple
     followTags = true

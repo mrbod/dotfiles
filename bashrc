@@ -11,6 +11,11 @@ alias vi=vim
 # alias vim=nvim
 alias :e=vim
 alias :E=vim
+alias p0='radio stop'
+alias p1='radio p1'
+alias p2='radio p2'
+alias p3='radio p3'
+alias p4='radio p4'
 
 # history
 shopt -s histappend
@@ -22,6 +27,10 @@ HISTTIMEFORMAT='%F %T '
 
 # completion
 source /usr/share/bash-completion/bash_completion
+if which pandoc >/dev/null 2>&1
+then
+    eval "$(pandoc --bash-completion)"
+fi
 
 if ! uname | grep 'MING' >/dev/null
 then

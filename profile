@@ -2,15 +2,12 @@ export LD_LIBRARY_PATH=~/lib
 
 PATH=$PATH:/sbin:/usr/sbin:/usr/local/sbin
 PATH=$PATH:/usr/libexec/xscreensaver
-if uname | grep CYGWIN > /dev/null
-then
-    PATH=~/bin:$PATH:.
-else
-    PATH=$PATH:/opt/mingw64/bin
-    PATH=$PATH:~/bin
-    PATH=$PATH:~/.local/bin
-    PATH=$PATH:.
-fi
+PATH=$PATH:/opt/pandoc-2.9.1.1/bin
+PATH=$PATH:/opt/mingw64/bin
+PATH=$PATH:~/bin
+PATH=$PATH:~/.local/bin
+PATH=$PATH:~/.cargo/bin
+PATH=$PATH:.
 export PATH
 
 export LANG=en_US.UTF-8
