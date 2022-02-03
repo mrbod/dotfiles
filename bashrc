@@ -4,13 +4,15 @@ alias lt='ls -ltr'
 alias grep='grep --color=auto'
 alias cal='cal -m -w'
 alias pylab='ipython --pylab'
-alias gh=hg
-alias gti=git
-alias vmi=vim
+alias gl='git ll'
+alias glal='git lal'
+alias glog='git log'
 alias vi=vim
 # alias vim=nvim
 alias :e=vim
 alias :E=vim
+alias od='od -A x'
+alias vs=vs17
 
 # history
 shopt -s histappend
@@ -22,11 +24,6 @@ HISTTIMEFORMAT='%F %T '
 
 # completion
 source /usr/share/bash-completion/bash_completion
-
-if ! uname | grep 'MING' >/dev/null
-then
-    source "$HOME/.dotfiles/gitprompt.sh"
-fi
 
 if [ "$TERM" == "xterm" ]
 then
