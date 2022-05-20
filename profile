@@ -4,6 +4,7 @@ export PERS_PROFILE_READ=yes
 export LD_LIBRARY_PATH=~/lib
 
 MYPATH="/sbin:/usr/sbin:/usr/local/sbin:~/bin:~/.local/bin:."
+MYPATH="$MYPATH:/opt/mingw64/bin"
 export PATH="$MYPATH:$PATH"
 
 export LANG=en_US.UTF-8
