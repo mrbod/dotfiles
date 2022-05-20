@@ -10,15 +10,15 @@
     ci = commit
     cip = commit --reset-author -c
     br = branch
-    co = checkout
+    sw = switch
     sm = submodule
     re = remote
     ds = diff --staged
     meld = difftool -d
-    #ancestor = merge-base --is-ancestor --
-    ancestor = !git_ancestor
-    lol = log --graph --oneline --decorate
-    lal = log --graph --oneline --decorate --all
+    ancestor = merge-base --is-ancestor --
+    xlol = log --graph --oneline --decorate
+    lol = log --graph --pretty='format:%C(auto)%h(%ai)%d %s'
+    lal = lol --all
     ll = lal -10
     lc = log --oneline --decorate origin..
     hl = log --format='tformat:* %ad %h%d%n%s' --date=short --reverse
@@ -26,7 +26,6 @@
     pick = log --oneline --abbrev-commit -G
     info = !git br -vv && git remote -v
     root = !basename \"$(git rev-parse --show-toplevel)\"
-    webui = !/home/per/prog/git-webui/release/libexec/git-core/git-webui
     tm = show --quiet --pretty=format:"%N"
     date = show --quiet --pretty=format:"%ai"
     ctags = !.git/hooks/ctags
