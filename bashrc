@@ -17,7 +17,6 @@ alias p2='radio p2'
 alias p3='radio p3'
 alias p4='radio p4'
 alias od='od -A x'
-alias vs=vs17
 
 # history
 shopt -s histappend
