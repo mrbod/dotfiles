@@ -50,3 +50,7 @@ FILE="$HOME/.dotfiles/transfer.sh"
 FILE="$HOME/.dotfiles/bashrc_local"
 [ -f "$FILE" ] && source "$FILE"
 
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+FILE="$HOME/.dotfiles/fzf.sh"
+[ -f "$FILE" ] && source "$FILE"

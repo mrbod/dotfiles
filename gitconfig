@@ -5,6 +5,8 @@
 [init]
     defaultBranch = master
 [alias]
+    anr = commit --amend --no-edit --reset-author
+    aa = anr
     st = status --column
     sp = status --porcelain
     ci = commit
@@ -16,8 +18,8 @@
     ds = diff --staged
     meld = difftool -d
     ancestor = merge-base --is-ancestor --
-    xlol = log --graph --oneline --decorate
-    lol = log --graph --pretty='format:%C(auto)%h(%ai)%d %s'
+    lol = log --graph --oneline --decorate
+    xlol = log --graph --pretty='format:%C(auto)%h(%ai)%d %s'
     lal = lol --all
     ll = lal -10
     lc = log --oneline --decorate origin..
