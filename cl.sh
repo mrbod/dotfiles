@@ -1,12 +1,13 @@
-function run_in_vs_env
+function X_run_in_vs_env
 {
     eval vssetup="\$$1\\$2"
-    cmd.exe /Q /C call "$vssetup" "&&" "${@:3}" | gawk 'BEGIN { output=0; } output {print $0;} /Environment initialized for/ { output=1; }'
+    cmd.exe /Q /C call "$vssetup" "&&" "${@:3}"
 }
 
-function Xrun_in_vs_env
+function run_in_vs_env
 {
-    _run_in_vs_env $* | gawk 'BEGIN { output=0; } output {print $0;} /Environment initialized for/ { output=1; }'
+    X_run_in_vs_env $* | gawk 'BEGIN { output=0; } output {print $0; fflush(stdout);} /Environment initialized for/ { output=1; }'
+    [ "${PIPESTATUS[0]}" == "0" ]
 }
 
 function vs17
@@ -52,6 +53,7 @@ function vs
     vs17 "$@"
 }
 
+export -f X_run_in_vs_env
 export -f run_in_vs_env
 #export -f vs10
 #export -f vs11

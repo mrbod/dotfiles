@@ -3,8 +3,11 @@ export PERS_PROFILE_READ=yes
 
 export LD_LIBRARY_PATH=~/lib
 
-MYPATH="/sbin:/usr/sbin:/usr/local/sbin:~/bin:~/.local/bin:."
+MYPATH="/sbin:/usr/sbin:/usr/local/sbin:~/bin:~/.local/bin"
+MYPATH="$MYPATH:~/bin/pkdata_bash_utils"
 MYPATH="$MYPATH:/opt/mingw64/bin"
+MYPATH="$MYPATH:."
+
 export PATH="$MYPATH:$PATH"
 
 export LANG=en_US.UTF-8

@@ -4,6 +4,7 @@ alias lt='ls -ltr'
 alias grep='grep --color=auto'
 alias cal='cal -m -w'
 alias pylab='ipython --pylab'
+alias gd='git diff'
 alias gl='git ll'
 alias glal='git lal'
 alias glog='git log'
@@ -18,6 +19,7 @@ alias p3='radio p3'
 alias p4='radio p4'
 alias od='od -A x'
 alias vs=vs17
+alias cl="vs cl"
 
 # history
 shopt -s histappend
