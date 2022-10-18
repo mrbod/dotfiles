@@ -50,6 +50,8 @@ FILE="$HOME/.dotfiles/transfer.sh"
 FILE="$HOME/.dotfiles/bashrc_local"
 [ -f "$FILE" ] && source "$FILE"
 
+export GDK_SCALE=2 #GWSL
+
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 FILE="$HOME/.dotfiles/fzf.sh"
