@@ -9,6 +9,8 @@ MYPATH="$MYPATH:$HOME/.cargo/bin"
 MYPATH="$MYPATH:."
 export PATH="$MYPATH:$PATH"
 
+grep -q -i microsoft /proc/version && export IS_WSL=yes || export IS_WSL=no
+
 export LANG=en_US.UTF-8
 
 export LESS=FMRX

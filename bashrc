@@ -51,3 +51,9 @@ FILE="$HOME/.dotfiles/bashrc_local"
 
 FILE="$HOME/.dotfiles/fzf.sh"
 [ -f "$FILE" ] && source "$FILE"
+
+if [ "$IS_WSL" == "yes" ]
+then
+    FILE="$HOME/.dotfiles/cl.sh"
+    [ -f "$FILE" ] && source "$FILE"
+fi
