@@ -11,17 +11,17 @@ export GIT_PS1_SHOWCOLORHINTS=1
 # prompt
 function __gitroot()
 {
-	tl=$(git rev-parse --show-toplevel 2>/dev/null)
-	if [ -n "$tl" ]
-	then
-	gr=$(realpath "$tl")
-	rp=$(realpath "$PWD")
-	if [ "$gr" != "$rp" ]
-	then
-		bntl=$(basename "$tl")
-		echo "$bntl "
-	fi
-	fi
+    tl=$(git rev-parse --show-toplevel 2>/dev/null)
+    if [ -n "$tl" ]
+    then
+        gr=$(realpath "$tl")
+        rp=$(realpath "$PWD")
+        if [ "$gr" != "$rp" ]
+        then
+            bntl=$(basename "$tl")
+            echo "$bntl "
+        fi
+    fi
 }
 
 #export PROMPT_COMMAND='__git_ps1 "\u@\h:\w" "\\\$ "'
