@@ -1,7 +1,8 @@
 alias ls="command ls --color=auto $LSIGNORE"
 alias ll='ls -l'
 alias lt='ls -ltr'
-alias grep='grep --color=auto'
+alias grep='grep -E --color=auto'
+alias sed='sed -E'
 alias cal='cal -m -w'
 alias pylab='ipython --pylab'
 alias gd='git diff'
@@ -18,7 +19,6 @@ alias p2='radio p2'
 alias p3='radio p3'
 alias p4='radio p4'
 alias od='od -A x'
-alias vs=vs17
 alias cl="vs cl"
 
 # history
@@ -44,15 +44,16 @@ fi
 FILE="$HOME/.dotfiles/cd_func.sh"
 [ -f "$FILE" ] && source "$FILE" && alias cd=cd_func
 
-FILE="$HOME/.dotfiles/transfer.sh"
-#[ -f "$FILE" ] && source "$FILE"
-
 FILE="$HOME/.dotfiles/bashrc_local"
 [ -f "$FILE" ] && source "$FILE"
 
-export GDK_SCALE=2 #GWSL
+export GDK_SCALE=1 #GWSL
 
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+FILE="$HOME/.fzf.bash"
+[ -f "$FILE" ] && source "$FILE"
 
 FILE="$HOME/.dotfiles/fzf.sh"
 [ -f "$FILE" ] && source "$FILE"
+
+. "$HOME/.cargo/env"
+

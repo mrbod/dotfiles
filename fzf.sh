@@ -1,5 +1,6 @@
-# custom stuff
+eval "$(fzf --bash)"
 
+# custom stuff
 _fzf_setup_completion path fcw_dump
 
 export FZF_DEFAULT_COMMAND='fd --type f --strip-cwd-prefix'

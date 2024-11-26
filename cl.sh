@@ -1,3 +1,22 @@
+function pargs
+{
+    a=$1
+    shift
+    cnt=1
+    while [ "x$a" != "x" ]
+    do
+        echo "$cnt: $a"
+        a=$1
+        shift
+        cnt=$((cnt + 1))
+    done
+}
+
+function run_in_ps_vs_env
+{
+    powershell.exe "$(wslpath -w ~/.dotfiles/vs.ps1)" $@
+}
+
 function X_run_in_vs_env
 {
     eval vssetup="\$$1\\$2"
@@ -48,6 +67,11 @@ function vs10
     run_in_vs_env VS100COMNTOOLS vsvars32.bat "$@"
 }
 
+function psvs
+{
+    run_in_ps_vs_env "$@"
+}
+
 function vs
 {
     vs17 "$@"
@@ -55,11 +79,8 @@ function vs
 
 export -f X_run_in_vs_env
 export -f run_in_vs_env
-#export -f vs10
-#export -f vs11
-#export -f vs12
-#export -f vs14
-#export -f vs15
+export -f run_in_ps_vs_env
 export -f vs16
 export -f vs17
 export -f vs
+export -f psvs
