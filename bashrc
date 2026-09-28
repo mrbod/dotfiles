@@ -2,6 +2,8 @@ alias ls="command ls --color=auto $LSIGNORE"
 alias ll='ls -l'
 alias lt='ls -ltr'
 alias grep='grep -E --color=auto'
+alias u2d='sed "s/\r*$/\r/"'
+alias d2u='sed "s/\r$//"'
 alias sed='sed -E'
 alias cal='cal -m -w'
 alias pylab='ipython --pylab'
@@ -20,6 +22,10 @@ alias p3='radio p3'
 alias p4='radio p4'
 alias od='od -A x'
 alias cl="vs cl"
+alias bc="bc -l"
+
+# vi-mode
+#set -o vi
 
 # history
 shopt -s histappend
@@ -49,11 +55,15 @@ FILE="$HOME/.dotfiles/bashrc_local"
 
 export GDK_SCALE=1 #GWSL
 
-FILE="$HOME/.fzf.bash"
-[ -f "$FILE" ] && source "$FILE"
-
 FILE="$HOME/.dotfiles/fzf.sh"
-[ -f "$FILE" ] && source "$FILE"
+[ -x "$FILE" ] && [ -f "$FILE" ] && source "$FILE"
+
+#FILE="$HOME/.dotfiles/fcw-completion.bash"
+#[ -f "$FILE" ] && source "$FILE"
 
 . "$HOME/.cargo/env"
+
+# heroku autocomplete setup
+HEROKU_AC_BASH_SETUP_PATH=/home/per/.cache/heroku/autocomplete/bash_setup
+[ -f "$HEROKU_AC_BASH_SETUP_PATH" ] && source "$HEROKU_AC_BASH_SETUP_PATH"
 

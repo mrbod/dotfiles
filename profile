@@ -5,9 +5,9 @@ export PERS_PROFILE_READ=yes
 MYPATH="/sbin:/usr/sbin:/usr/local/sbin:$HOME/bin:$HOME/.local/bin"
 MYPATH="$MYPATH:/opt/mingw64/bin"
 MYPATH="$MYPATH:/opt/passenger-6.0.19/bin"
-MYPATH="$MYPATH:~/.cargo/bin"
-MYPATH="~/.rustup/shims:$MYPATH"
-MYPATH="$MYPATH:."
+MYPATH="$MYPATH:$HOME/.cargo/bin"
+MYPATH="$HOME/.rustup/shims:$MYPATH"
+#MYPATH="$MYPATH:."
 export PATH="$MYPATH:$PATH"
 
 export TZ=CET
@@ -27,7 +27,7 @@ export CDPATH=.
 export CPPUTEST_HOME=~/prog/cpputest
 export GTEST_BASE=~/googletest
 
-if [ -f ~/.Xresources ]
+if [ -f ~/.Xresources ] && [ -n "$DISPLAY" ]
 then
     xrdb -merge ~/.Xresources
 fi
